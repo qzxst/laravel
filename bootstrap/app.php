@@ -120,13 +120,13 @@ $app->router->group([
     require __DIR__ . '/../routes/api.php';
 });
 
-// $app['Dingo\Api\Exception\Handler']->setErrorFormat([
-//     'error' => [
-//         'message' => ':message',
-//         'errors' => ':errors',
-//         'code' => ':code',
-//         'status_code' => ':status_code',
-//         'debug' => ':debug'
-//     ]
-// ]);
+$app['Dingo\Api\Exception\Handler']->setErrorFormat([
+    'error' => [
+        'message' => ':message',
+        'errors' => ':errors',
+        'code' => ':code',
+        'status_code' => ':status_code',
+        'debug' => ':debug'
+    ]
+]);
 return $app;

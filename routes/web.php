@@ -19,3 +19,10 @@ $router->get('/', function () use ($router) {
 $router->get('/hello/{id}', function ($id) use ($router) {
     return $router->app->version();
 });
+
+$router->group(
+    ['prefix' => 'admin'], //prefix URI前缀  App\Http\Controllers
+    function () use ($router) {
+        $router->get('index', 'Admin\LoginController@index');
+    }
+);
