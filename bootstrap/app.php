@@ -9,6 +9,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
     dirname(__DIR__)
 ))->bootstrap();
 
+
 date_default_timezone_set(env('APP_TIMEZONE', 'PRC'));
 
 /*
@@ -26,9 +27,9 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
-$app->withFacades();//为应用程序注册门面。
+$app->withFacades(); //为应用程序注册门面。
 
-$app->withEloquent();//为应用程序加载功能强大的库。
+$app->withEloquent(); //为应用程序加载功能强大的库。
 
 /*
 |--------------------------------------------------------------------------
@@ -83,7 +84,6 @@ $app->middleware([
 
 $app->routeMiddleware([
     'throttle' => App\Http\Middleware\ThrottleRequests::class,
-    'auth' => App\Http\Middleware\Authenticate::class,
 ]);
 
 /*
@@ -120,13 +120,13 @@ $app->router->group([
     require __DIR__ . '/../routes/api.php';
 });
 
-$app['Dingo\Api\Exception\Handler']->setErrorFormat([
-    'error' => [
-        'message' => ':message',
-        'errors' => ':errors',
-        'code' => ':code',
-        'status_code' => ':status_code',
-        'debug' => ':debug'
-    ]
-]);
+// $app['Dingo\Api\Exception\Handler']->setErrorFormat([
+//     'error' => [
+//         'message' => ':message',
+//         'errors' => ':errors',
+//         'code' => ':code',
+//         'status_code' => ':status_code',
+//         'debug' => ':debug'
+//     ]
+// ]);
 return $app;

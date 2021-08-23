@@ -13,8 +13,13 @@ class AdController extends Controller
 
     public function index()
     {
-//        Redis::setex('site_name', 10, 'Lumen的redis');
-//        return Redis::get('site_name');
+        Redis::setex('site_name', 10, 'Lumen的redis');
+        return Redis::get('site_name');
+    }
 
+
+    public function post()
+    {
+        return ['测试'];
     }
 }
