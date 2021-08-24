@@ -17,9 +17,9 @@ $api->version('v2', function ($api) {
 });
 
 /** @var Dingo\Api\Routing\Router $api */
-$api->version('v1', [], function ($api) {
+$api->version('v1', [
+    'namespace' => 'App\Http\Controllers\Api\v1'
+], function ($api) {
     /** @var Dingo\Api\Routing\Router $api */
-    $api->get('ad', function () {
-        return ['hello'];
-    });
+    $api->get('ad', 'AdController@index');
 });
