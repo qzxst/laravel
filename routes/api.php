@@ -22,4 +22,6 @@ $api->version('v1', [
 ], function ($api) {
     /** @var Dingo\Api\Routing\Router $api */
     $api->get('ad', 'AdController@index');
+    $api->get('post', 'AdController@post');
+    $api->get('ip', 'AdController@ip');
 });

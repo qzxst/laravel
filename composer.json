@@ -14,7 +14,8 @@
         "illuminate/redis": "^7.30",
         "laravel/lumen-framework": "^7.0",
         "predis/predis": "^1.1",
-        "zhuzhichao/ip-location-zh": "^2.4"
+        "zhuzhichao/ip-location-zh": "^2.4",
+        "itbdw/ip-database": "v2.0.9"
     },
     "require-dev": {
         "laracasts/generators": "^2.0",

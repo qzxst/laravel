@@ -2,8 +2,9 @@
 
 use Symfony\Component\VarDumper\VarDumper;
 
-if (!function_exists('dd')){
-    function  dd($var,...$moreVars){
+if (!function_exists('dd')) {
+    function  dd($var, ...$moreVars)
+    {
         VarDumper::dump($var);
 
         foreach ($moreVars as $v) {
@@ -16,4 +17,11 @@ if (!function_exists('dd')){
 
         return $var;
     }
+}
+
+function dir_path($path)
+{
+    $path = str_replace('\\', '/', $path);
+    if (substr($path, -1) != '/') $path = $path . '/';
+    return $path;
 }

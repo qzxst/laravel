@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c597632908bec2e403a0cb1f3635cf1",
+    "content-hash": "c7bb52a18f39e660df58c7380816ad62",
     "packages": [
         {
             "name": "brick/math",
@@ -2203,6 +2203,73 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2020-10-27T15:11:37+00:00"
+        },
+        {
+            "name": "itbdw/ip-database",
+            "version": "v2.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/itbdw/ip-database.git",
+                "reference": "f16b66269e9f0828599074228ded2385d0bda97e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/itbdw/ip-database/zipball/f16b66269e9f0828599074228ded2385d0bda97e",
+                "reference": "f16b66269e9f0828599074228ded2385d0bda97e",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-iconv": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "~5.4|~7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "itbdw\\Ip\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "itbdw",
+                    "email": "itbudaoweng@gmail.com",
+                    "homepage": "http://github.com/itbdw",
+                    "role": "Developer"
+                }
+            ],
+            "description": "免费IP地址数据库(纯真IP地址数据库，输出格式为国家、省、市、县、运营商)❤️ 🇨🇳，中文数据库",
+            "keywords": [
+                "IP",
+                "IP地址库",
+                "IP数据库",
+                "database",
+                "location",
+                "qqwry",
+                "数据库",
+                "纯真IP地址库"
+            ],
+            "support": {
+                "issues": "https://github.com/itbdw/ip-database/issues",
+                "source": "https://github.com/itbdw/ip-database/tree/v2.0.9"
+            },
+            "funding": [
+                {
+                    "url": "https://wx1.sinaimg.cn/large/6b94a2e5ly1gjoqqrkup8j20u00u0wh1.jpg",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-11-06T17:54:36+00:00"
         },
         {
             "name": "laravel/lumen-framework",
