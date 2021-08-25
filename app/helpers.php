@@ -19,9 +19,11 @@ if (!function_exists('dd')) {
     }
 }
 
-function dir_path($path)
-{
-    $path = str_replace('\\', '/', $path);
-    if (substr($path, -1) != '/') $path = $path . '/';
-    return $path;
+if (!function_exists('dir_path')) {
+    function dir_path($path)
+    {
+        $path = str_replace('\\', '/', $path);
+        if (substr($path, -1) != '/') $path = $path . '/';
+        return $path;
+    }
 }

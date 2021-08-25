@@ -24,10 +24,10 @@ class AdController extends Controller
     public function post()
     {
         $ip = Request::ip();
-        $ip = '129.168.12.11';
         $country = $this->checkIp($ip);
-        dd($country);
-        exit;
+        $country = $country['country'];
+        $status = $country == '泰国' ? 1 : 2;
+        dd(compact('status'));
     }
 
 
@@ -47,7 +47,7 @@ class AdController extends Controller
 
         //        $ip = '67.220.90.13';
         //支持自定义文件路径
-        $qqwry_filepath =  dir_path(base_path())  . 'public/abspath/qqwry.dat';
+        $qqwry_filepath =  dir_path(base_path('public/abspath'))  . 'qqwry.dat';
         $info = IpLocation::getLocation($ip, $qqwry_filepath);
         return $info;
         /*print_r(IpLocation::getLocation($ip, $qqwry_filepath));exit;
