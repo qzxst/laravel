@@ -31,8 +31,5 @@ class ExampleListener
      */
     public function handle(ExampleEvent $event)
     {
-        //
-        $user = $event->user;
-        Log::info($user);
     }
 }
